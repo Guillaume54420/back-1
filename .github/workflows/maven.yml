@@ -30,4 +30,5 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml -DskipTests=true
       
-    - run: ls -ali && ls -ali target/
+    - name: Build and push Docker images
+      uses: docker/build-push-action@v3.2.0
